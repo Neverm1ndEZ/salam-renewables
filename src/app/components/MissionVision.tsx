@@ -54,28 +54,29 @@ export default function MissionVision() {
 							<div>
 								<CheckCheck className="text-2xl" />
 							</div>{" "}
-							Delivering innovative clean energy systems for a greener future.
+							We harness solar power to supply clean energy to distribution
+							agencies, fostering sustainable communities.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-sky-100">
 							<div>
 								<CheckCheck className="text-2xl" />
 							</div>{" "}
-							Develop and produce cutting-edge biofuels and ethanol to reduce
-							carbon emissions and decrease fossil fuel dependence.
+							We provide efficient solar solutions to partners, enabling
+							widespread renewable energy use.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-sky-100">
 							<div>
 								<CheckCheck className="text-2xl" />
 							</div>{" "}
-							Harness innovative technology and renewable resources to create a
-							cleaner, greener future.
+							We deliver high-quality solar power to distribution agencies,
+							reducing carbon footprints.
 						</div>
 						<div className="flex items-center gap-4 text-sm sm:text-base font-medium text-sky-100">
 							<div>
 								<CheckCheck className="text-2xl" />
 							</div>{" "}
-							Foster partnerships with farmers, researchers, and communities for
-							responsible and efficient use of agricultural resources.
+							We supply affordable solar energy to distributors, empowering
+							communities and advancing sustainability.
 						</div>
 					</div>
 				</div>

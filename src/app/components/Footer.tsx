@@ -1,101 +1,60 @@
-import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="bg-gradient-to-b from-sky-400 via-sky-700 to-sky-900 text-white py-12">
+		<footer className="bg-gradient-to-b from-sky-400 via-sky-700 to-sky-900 text-white py-8 sm:py-12">
 			<div className="container mx-auto px-4">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-					<div className="mb-8 md:mb-0">
+				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-8">
+					<div className="w-full sm:w-1/4 mb-8 sm:mb-0">
 						<Image
 							src="/logo-full.png"
 							alt="Salam Renewables"
 							width={240}
 							height={40}
-							className="mb-4"
+							className="mb-4 max-w-full h-auto"
 						/>
-						<p className="text-sky-100">
+						<p className="text-sky-100 text-sm">
 							Empowering homes and businesses with sustainable solar energy
 							solutions.
 						</p>
 					</div>
-					<div>
-						<h4 className="text-xl font-semibold mb-4 text-sky-200">
-							Quick Links
-						</h4>
-						<ul className="space-y-2">
-							<li>
-								<Link
-									href="/"
-									className="text-sky-100 hover:text-white transition-colors"
-								>
-									Home
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#features"
-									className="text-sky-100 hover:text-white transition-colors"
-								>
-									Features
-								</Link>
-							</li>
-							<li>
-								<Link
-									href="#contact"
-									className="text-sky-100 hover:text-white transition-colors"
-								>
-									Contact
-								</Link>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h4 className="text-xl font-semibold mb-4 text-sky-200">
-							Contact Us
-						</h4>
-						<p className="text-sky-100">123 Solar Street</p>
-						<p className="text-sky-100">Sunshine City, SC 12345</p>
-						<p className="text-sky-100">Phone: (555) 123-4567</p>
-						<p className="text-sky-100">Email: info@solarrenew.com</p>
-					</div>
-					<div>
-						<h4 className="text-xl font-semibold mb-4 text-sky-200">
-							Follow Us
-						</h4>
-						<div className="flex space-x-4">
-							<a
-								href="#"
-								className="text-sky-100 hover:text-white transition-colors"
-							>
-								<Facebook size={24} />
-							</a>
-							<a
-								href="#"
-								className="text-sky-100 hover:text-white transition-colors"
-							>
-								<Twitter size={24} />
-							</a>
-							<a
-								href="#"
-								className="text-sky-100 hover:text-white transition-colors"
-							>
-								<Instagram size={24} />
-							</a>
-							<a
-								href="#"
-								className="text-sky-100 hover:text-white transition-colors"
-							>
-								<Linkedin size={24} />
-							</a>
+					<div className="flex flex-col sm:flex-row gap-8">
+						<div>
+							<h4 className="text-lg font-semibold mb-2 text-sky-200">
+								Contact Us
+							</h4>
+							<address className="text-sky-100 text-sm not-italic">
+								<p>Old No.15/1, New No.23/1,</p>
+								<p>Chamiers Road, Nandanam, Chennai,</p>
+								<p>Tamil Nadu, India - 600035.</p>
+								<p>Phone: +91-99402 57433</p>
+								<p>Email: info@salamrenewables.com</p>
+							</address>
+						</div>
+						<div>
+							<h4 className="text-lg font-semibold mb-2 text-sky-200">
+								Follow Us
+							</h4>
+							<div className="flex space-x-4">
+								{[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
+									<a
+										key={index}
+										href="#"
+										className="text-sky-100 hover:text-white transition-colors"
+										aria-label={`Social media link ${index + 1}`}
+									>
+										<Icon size={20} />
+									</a>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
-				<div className="border-t border-sky-600 mt-8 pt-8 text-center">
-					<p className="text-sky-200">
+				<div className="border-t border-sky-600 mt-8 pt-4 text-center">
+					<p className="text-sky-200 text-xs sm:text-sm">
 						&copy; {currentYear} Salam Renewable Energy Private Limited. All
 						rights reserved.
 					</p>

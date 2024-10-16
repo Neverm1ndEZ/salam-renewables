@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Button } from "@material-tailwind/react";
 
 interface SustainabilityCardProps {
 	imageSrc: string;
@@ -59,16 +58,6 @@ const SustainabilityCard: React.FC<SustainabilityCardProps> = ({
 				>
 					{description}
 				</p>
-				<Button
-					variant="gradient"
-					color="light-blue"
-					className="mt-4"
-					placeholder=""
-					onPointerEnterCapture={() => {}}
-					onPointerLeaveCapture={() => {}}
-				>
-					Learn More
-				</Button>
 			</div>
 		</div>
 	);
